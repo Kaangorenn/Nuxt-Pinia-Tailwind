@@ -10,17 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.5.2",
-    "nuxt": "^3.12.4",
-    "pinia": "^2.2.0",
-    "vue": "latest"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.40",
-    "tailwindcss": "^3.4.7"
-  },
-  "overrides": {
-    "vue": "latest"
+    "@nuxt/fonts": "^0.11.4",
+    "@nuxtjs/supabase": "^1.5.2",
+    "@pinia/nuxt": "^0.11.1",
+    "@tailwindcss/vite": "^4.1.10",
+    "bcrypt": "^6.0.0",
+    "nuxt": "^3.17.5",
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.3.0",
+    "tailwindcss": "^4.1.10",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
   }
 }

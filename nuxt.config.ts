@@ -1,18 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  compatibilityDate: '2025-05-15',
+  devtools: {
+    enabled: true
   },
-
   modules: [
     '@pinia/nuxt',
+    '@nuxtjs/supabase',
+    'pinia-plugin-persistedstate/nuxt',
+    '@nuxt/fonts',
   ],
-
-  compatibilityDate: '2024-07-28',
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [tailwindcss(),],
+  },
+  supabase: {
+    redirectOptions: {
+      login: '/auth/login',
+      callback: '/auth/confirm',
+      include: undefined,
+      exclude: ['*'],
+      saveRedirectToCookie: false,
+    }
+  }
 })
